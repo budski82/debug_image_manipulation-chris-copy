@@ -1,3 +1,4 @@
+import { gsap } from "./gsap";
 import {Dot} from './Dot.js'
 
 const canvas = document.querySelector('canvas');
