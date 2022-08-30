@@ -31,13 +31,20 @@ ctx.drawImage(img, 0, 0);
  };
 };
 
-pixels.forEach(pixel =>{
+pixels.forEach((pixel, i) =>{
   // const x = pixel.x + canvas.width  *.5 - img.naturalWidth   * .5;
   // const y = pixel.y + canvas.height *.5 - img.naturalHeight  * .5;
-  const random = Math.random() * Math.PI * 2;
-	const x = Math.sin(random) * 100 + canvas.width  * .5;
-	const y = Math.cos(random) * 100 + canvas.height * .5;
+  let rand = Math.random() * Math.PI * 2;
+	const x = Math.sin(rand) * 100 + canvas.width / 2;
+	const y = Math.cos(rand) * 100 + canvas.height / 2;
   dots.push(new Dot(x, y, pixel.r, pixel.g, pixel.b, 0, 0));
+  rand =  Math.random() * Math.PI * 2;
+
+ gsap.to(dots[i], {
+	duration: 5,
+	x: Math.sin(rand) *100 + canvas.width / 2,
+	y: Math.cos(rand) *100 + canvas.height / 2,
+ })
 });
 
 function animate() {
