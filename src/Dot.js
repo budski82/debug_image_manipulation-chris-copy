@@ -9,11 +9,11 @@ class Dot {
     this.imageY = imageY
   }
 
-  draw(c) {
-    c.beginPath()
-    c.arc(this.x, this.y, 2, 0, 2 * Math.PI, false)
-    c.fillStyle = 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')'
-    c.fill()
+  draw(ctx) {
+    ctx.beginPath()
+    ctx.arc(this.x, this.y, 2, 0, 2 * Math.PI, false)
+    ctx.fillStyle = 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')'
+    ctx.fill()
   }
 }
 
