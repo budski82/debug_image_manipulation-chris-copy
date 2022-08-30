@@ -16,7 +16,11 @@ addEventListener('load', () => {
   const pixels = [];
 
  for (let i = 0; i < imageData.length; i += 4) {
-  
- }
+  pixels.push({
+		r: imageData[i],
+		g: imageData[i + 1],
+		b: imageData[i + 2]
+	});
+ };
 console.log(imageData);
 });
