@@ -10,14 +10,15 @@ canvas.height = innerHeight;
 ctx.drawImage(img, 0, 0);
 
 	const imageData = ctx.getImageData(0, 0, img.naturalWidth, img.naturalHeight).data;
-  const dots = [];
+  const dots   = [];
   const pixels = [];
 
  for (let i = 0; i < imageData.length; i += 4) {
    if(imageData[i] === 0) continue;
 
 	const x = (i /4) % img.naturalWidth;
-	const y = Math.floor(Math.floor(i / img.naturalWidth) / 4);
+	const y = Math.floor(Math.floor(i / img.naturalWidth) / 4); 
+
  if(x % 5 === 0 && y % 5 === 0){
   pixels.push({
 		x,
@@ -30,15 +31,20 @@ ctx.drawImage(img, 0, 0);
 };
 
 pixels.forEach(pixel =>{
-	dots.push(new Dot(pixel.x, pixel.y, pixel.r, pixel.g, pixel.b, 0, 0));
+  // const x = pixel.x + canvas.width  *.5 - img.naturalWidth   * .5;
+  // const y = pixel.y + canvas.height *.5 - img.naturalHeight  * .5;
+  const random = Math.random() * Math.PI * 2;
+	const x = Math.sin(random) * 100 + canvas.width  * .5;
+	const y = Math.cos(random) * 100 + canvas.height * .5;
+  dots.push(new Dot(x, y, pixel.r, pixel.g, pixel.b, 0, 0));
 });
 
 function animate() {
 	requestAnimationFrame(animate)
 	ctx.clearRect(0, 0, innerWidth,innerHeight);
   dots.forEach(dot =>{
-		dot.draw(ctx);
-		dot.x++
+	dot.draw(ctx);
+	//dot.x++
 	});
 };
 animate();
