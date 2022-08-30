@@ -12,9 +12,10 @@ class Dot {
   draw(ctx) {
     ctx.beginPath()
     ctx.arc(this.x, this.y, 2, 0, 2 * Math.PI, false)
-    ctx.fillStyle = 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')'
+    ctx.fillStyle = `rgb(${this.r} ${this.g} ${this.b})`
     ctx.fill()
   }
 }
 
 export {Dot}
+
