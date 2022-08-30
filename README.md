@@ -9,3 +9,5 @@ to get the img src link to render I add to the end after the png file type. ?raw
 I found this googeling when I could not get my GitHub image links to render I use GitHub pages to hoist from and test.
 
 Adding it just works .....see video link
+
+I used your supplied code and it flows along with the time stamps you will notice I have not even gotten to the animation yet. Before it gets weird?? 
