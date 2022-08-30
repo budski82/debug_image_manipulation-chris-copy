@@ -10,4 +10,4 @@ I found this googeling when I could not get my GitHub image links to render I us
 
 Adding it just works .....see video link
 
-I used your supplied code and it flows along with the time stamps you will notice I have not even gotten to the animation yet. Before it gets weird?? 
+I used your supplied code and it flows along with the time stamps you will notice I have not even gotten to the animation yet, any code after 16 or more minutes. Before it gets weird?? 

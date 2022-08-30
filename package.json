@@ -1,0 +1,21 @@
+{
+  "name": "debug_image_manipulation-chris-copy",
+  "version": "1.0.0",
+  "description": "I added a package.json file and added type / modules to it",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/budski82/debug_image_manipulation-chris-copy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/budski82/debug_image_manipulation-chris-copy/issues"
+  },
+  "homepage": "https://github.com/budski82/debug_image_manipulation-chris-copy#readme"
+}
