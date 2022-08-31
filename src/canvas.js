@@ -35,15 +35,15 @@ pixels.forEach((pixel, i) =>{
   // const x = pixel.x + canvas.width  *.5 - img.naturalWidth   * .5;
   // const y = pixel.y + canvas.height *.5 - img.naturalHeight  * .5;
   let rand = Math.random() * Math.PI * 2;
-	const x = Math.sin(rand) * 100 + canvas.width / 2;
-	const y = Math.cos(rand) * 100 + canvas.height / 2;
+	const x = Math.sin(rand) * 200 + canvas.width / 2;
+	const y = Math.cos(rand) * 200 + canvas.height / 2;
   dots.push(new Dot(x, y, pixel.r, pixel.g, pixel.b, 0, 0));
   rand =  Math.random() * Math.PI * 2;
 
  gsap.to(dots[i], {
-	duration: 5,
-	x: Math.sin(rand) *100 + canvas.width / 2,
-	y: Math.cos(rand) *100 + canvas.height / 2,
+	duration: 15,
+	x: Math.sin(rand) *600 + canvas.width / 2,
+	y: Math.cos(rand) *600 + canvas.height / 2,
  })
 });
 
@@ -52,7 +52,7 @@ function animate() {
 	ctx.clearRect(0, 0, innerWidth,innerHeight);
   dots.forEach(dot =>{
 	dot.draw(ctx);
-	//dot.x++
+	dot.x++
 	});
 };
 animate();
